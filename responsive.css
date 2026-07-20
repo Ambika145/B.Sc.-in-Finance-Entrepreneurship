@@ -137,6 +137,219 @@ img {
     overflow: visible !important;
     display: flex !important;
     flex-direction: column !important;
+    isolation: auto !important;
+  }
+
+  .hero-section .hero-container {
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: visible !important;
+    max-height: none !important;
+    height: auto !important;
+    padding-top: 0.75rem !important;
+    padding-bottom: 0 !important;
+    padding-left: clamp(14px, 3.5vw, 20px) !important;
+    padding-right: clamp(14px, 3.5vw, 20px) !important;
+    margin: 0 auto !important;
+  }
+
+  .hero-header {
+    padding: 0.5rem 0 0.75rem !important;
+    flex: none !important;
+  }
+
+  .hero-section .header-logos {
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 0.75rem 1rem !important;
+  }
+
+  .hero-section .header-logo-jgu,
+  .hero-section .header-logo-ideate {
+    height: 3.25rem !important;
+    max-height: 3.25rem !important;
+    width: auto !important;
+    max-width: min(42vw, 11rem) !important;
+  }
+
+  .hero-main {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 1.15rem !important;
+    padding: 0 0 1.25rem !important;
+    margin: 0 !important;
+    min-height: auto !important;
+    max-height: none !important;
+    height: auto !important;
+    overflow: visible !important;
+    grid-template-columns: none !important;
+  }
+
+  .hero-bg-circuit {
+    display: none !important;
+  }
+
+  .hero-left {
+    order: 1 !important;
+    width: 100% !important;
+    max-width: 36rem !important;
+    text-align: center !important;
+    align-items: center !important;
+    align-self: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  .hero-section .hero-title {
+    font-size: clamp(1.55rem, 5vw, 2rem) !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .hero-title-line,
+  .hero-title-finance,
+  .hero-title-entrepreneurship {
+    white-space: normal !important;
+  }
+
+  .hero-title-line {
+    display: block !important;
+  }
+
+  .hero-title-rule {
+    margin: 0.75rem auto 0 !important;
+    max-width: 12rem !important;
+  }
+
+  .hero-section .hero-subtitle {
+    font-size: clamp(0.78rem, 2.6vw, 0.95rem) !important;
+    margin-top: 0.85rem !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.02em !important;
+  }
+
+  .hero-subtitle-line {
+    display: block !important;
+  }
+
+  .hero-section .hero-description {
+    font-size: clamp(0.84rem, 2.6vw, 0.95rem) !important;
+    line-height: 1.55 !important;
+    margin-top: 0.75rem !important;
+    max-width: 34rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .hero-section .btn-apply-now {
+    margin: 1.1rem auto 0 !important;
+    align-self: center !important;
+    padding: 0.8rem 2.2rem !important;
+    font-size: 0.95rem !important;
+  }
+
+  .hero-center {
+    order: 2 !important;
+    width: 100% !important;
+    max-width: min(18rem, 70vw) !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    transform: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+  }
+
+  .hero-student-stack {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .hero-student-img {
+    max-height: clamp(13rem, 48vw, 18rem) !important;
+    max-width: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    object-fit: contain !important;
+    object-position: bottom center !important;
+    transform: none !important;
+  }
+
+  .hero-right {
+    order: 3 !important;
+    width: 100% !important;
+    max-width: min(100%, 26rem) !important;
+    margin: 0 auto 1rem !important;
+    padding: 0 !important;
+    align-self: center !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .hero-enquiry-card {
+    min-height: 0 !important;
+    max-height: none !important;
+    height: auto !important;
+    overflow: visible !important;
+    padding: 1.2rem 1rem 1rem !important;
+    border-radius: 1.1rem !important;
+    width: 100% !important;
+  }
+
+  .hero-enquiry-card h3 {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.85rem !important;
+  }
+
+  .hero-npf-scroll {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .hero-enquiry-card .npf_wgts,
+  .hero-enquiry-card .npf_wgts iframe {
+    width: 100% !important;
+    height: 400px !important;
+    min-height: 400px !important;
+    max-height: none !important;
+  }
+
+  .hero-enquiry-card .npf_wgts form,
+  .hero-enquiry-card .npf_wgts .form-group,
+  .hero-enquiry-card .npf_wgts .row {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .hero-enquiry-card .npf_wgts [class*="col-"] {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .hero-enquiry-card .npf_wgts input,
+  .hero-enquiry-card .npf_wgts select,
+  .hero-enquiry-card .npf_wgts textarea,
+  .hero-enquiry-card .npf_wgts button {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .hero-info-bar {
@@ -144,129 +357,119 @@ img {
     visibility: visible !important;
     opacity: 1 !important;
     flex: 0 0 auto !important;
-    order: 99;
+    order: 99 !important;
     width: 100% !important;
     max-width: 100% !important;
-    margin-top: 0 !important;
+    margin: 0 !important;
+    padding: 0.75rem 0.5rem !important;
     position: relative !important;
     z-index: 5 !important;
   }
 
-  .hero-section .hero-container {
-    overflow: visible !important;
-    padding-left: clamp(12px, 3vw, 20px);
-    padding-right: clamp(12px, 3vw, 20px);
-  }
-
-  .hero-main {
-    gap: clamp(14px, 3vw, 24px);
-    padding-bottom: 1.25rem;
-  }
-
-  .hero-left {
-    order: 1;
-    width: 100%;
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-  }
-
-  .hero-center {
-    order: 2;
-    transform: none !important;
-    margin-bottom: 0 !important;
-    max-width: min(32rem, 100%);
-  }
-
-  .hero-student-img {
-    max-height: clamp(14rem, 48vw, 20rem) !important;
-    width: auto;
-    margin: 0 auto;
-  }
-
-  .hero-right {
-    order: 3;
-    width: min(100%, 30rem) !important;
-    max-width: min(100%, 30rem) !important;
-    margin: 0 auto clamp(1.25rem, 4vw, 2rem) !important;
-    padding: 0;
-  }
-
-  .hero-enquiry-card {
-    min-height: 18rem !important;
-    max-height: min(32rem, 78vh) !important;
-  }
-
-  .hero-npf-scroll {
-    max-height: min(360px, 54vh) !important;
-  }
-
-  .hero-description {
-    max-width: 36rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .hero-info-inner {
-    padding-left: clamp(8px, 2vw, 16px);
-    padding-right: clamp(8px, 2vw, 16px);
-  }
-}
-
-/* --- Hero: small tablet / large phone --- */
-@media screen and (max-width: 767px) {
-  .hero-header {
-    padding-top: 0.75rem;
-    padding-bottom: 0.5rem;
-  }
-
-  .hero-section .header-logos {
-    gap: 0.75rem;
-    justify-content: center;
-  }
-
-  .hero-title {
-    font-size: clamp(1.5rem, 5.5vw, 1.95rem) !important;
-  }
-
-  .hero-subtitle {
-    font-size: clamp(0.78rem, 2.9vw, 0.92rem) !important;
-    letter-spacing: 0.03em;
-  }
-
-  .hero-description {
-    font-size: clamp(0.8rem, 2.8vw, 0.92rem) !important;
-    line-height: 1.55;
-  }
-
-  .hero-right {
-    width: min(100%, 24rem) !important;
-    max-width: min(100%, 24rem) !important;
-  }
-
-  .hero-enquiry-card {
-    min-height: 17rem !important;
-    max-height: min(30rem, 72vh) !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
   }
 
   .hero-info-item {
     flex: 1 1 50% !important;
-    font-size: clamp(0.7rem, 2.6vw, 0.82rem) !important;
-    padding: 0.45rem 0.35rem !important;
-    line-height: 1.35;
-  }
-
-  .hero-info-item:nth-child(odd) {
     border-right: 1px solid rgba(255, 255, 255, 0.22) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
+    font-size: clamp(0.72rem, 2.5vw, 0.85rem) !important;
+    font-weight: 700 !important;
+    padding: 0.55rem 0.4rem !important;
+    line-height: 1.35 !important;
+    text-align: center !important;
   }
 
-  .hero-info-item:nth-child(even) {
+  .hero-info-item:nth-child(2n) {
     border-right: none !important;
   }
 
   .hero-info-item:nth-child(5) {
     flex: 1 1 100% !important;
     border-right: none !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: none !important;
+  }
+}
+
+/* --- Hero: phones --- */
+@media screen and (max-width: 767px) {
+  .hero-section .hero-container {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  .hero-section .header-logo-jgu,
+  .hero-section .header-logo-ideate {
+    height: 2.85rem !important;
+    max-height: 2.85rem !important;
+    max-width: min(40vw, 9.5rem) !important;
+  }
+
+  .hero-main {
+    gap: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .hero-section .hero-title {
+    font-size: clamp(1.4rem, 5.8vw, 1.75rem) !important;
+    line-height: 1.22 !important;
+  }
+
+  .hero-section .hero-subtitle {
+    font-size: clamp(0.74rem, 2.8vw, 0.88rem) !important;
+    margin-top: 0.7rem !important;
+  }
+
+  .hero-section .hero-description {
+    font-size: clamp(0.8rem, 3vw, 0.9rem) !important;
+    margin-top: 0.65rem !important;
+  }
+
+  .hero-section .btn-apply-now {
+    padding: 0.75rem 2rem !important;
+    font-size: 0.9rem !important;
+    margin-top: 0.95rem !important;
+  }
+
+  .hero-center {
+    max-width: min(15rem, 62vw) !important;
+  }
+
+  .hero-student-img {
+    max-height: clamp(11.5rem, 46vw, 15.5rem) !important;
+  }
+
+  .hero-right {
+    max-width: 100% !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .hero-enquiry-card {
+    padding: 1.05rem 0.9rem 0.95rem !important;
+    border-radius: 1rem !important;
+  }
+
+  .hero-enquiry-card h3 {
+    font-size: 1.05rem !important;
+    margin-bottom: 0.7rem !important;
+  }
+
+  .hero-enquiry-card .npf_wgts,
+  .hero-enquiry-card .npf_wgts iframe {
+    height: 390px !important;
+    min-height: 390px !important;
+  }
+
+  .hero-info-item {
+    font-size: 0.78rem !important;
+    padding: 0.5rem 0.3rem !important;
   }
 
   .features-slider-wrap,
@@ -292,45 +495,45 @@ img {
     padding-right: 12px !important;
   }
 
-  .hero-title {
-    font-size: clamp(1.28rem, 6.2vw, 1.55rem) !important;
+  .hero-section .header-logo-jgu,
+  .hero-section .header-logo-ideate {
+    height: 2.5rem !important;
+    max-height: 2.5rem !important;
+    max-width: min(38vw, 8.5rem) !important;
   }
 
-  .hero-subtitle {
-    font-size: clamp(0.68rem, 3.2vw, 0.78rem) !important;
+  .hero-section .hero-title {
+    font-size: clamp(1.28rem, 6.4vw, 1.55rem) !important;
   }
 
-  .hero-description {
-    font-size: clamp(0.76rem, 3.4vw, 0.86rem) !important;
+  .hero-section .hero-subtitle {
+    font-size: clamp(0.7rem, 3vw, 0.8rem) !important;
+  }
+
+  .hero-section .hero-description {
+    font-size: clamp(0.78rem, 3.2vw, 0.88rem) !important;
+  }
+
+  .hero-center {
+    max-width: min(13.5rem, 58vw) !important;
   }
 
   .hero-student-img {
-    max-height: clamp(12rem, 56vw, 17rem) !important;
-  }
-
-  .hero-right {
-    width: 100% !important;
-    max-width: 100% !important;
+    max-height: clamp(10.5rem, 50vw, 14rem) !important;
   }
 
   .hero-enquiry-card {
-    min-height: 15rem !important;
-    max-height: min(26rem, 68vh) !important;
-    padding: 1.1rem 0.9rem 0.9rem !important;
-    border-radius: 1rem;
+    padding: 0.95rem 0.8rem 0.85rem !important;
   }
 
-  .hero-enquiry-card h3 {
-    font-size: 1.05rem !important;
-    margin-bottom: 0.75rem !important;
-  }
-
-  .hero-npf-scroll {
-    max-height: min(280px, 46vh) !important;
+  .hero-enquiry-card .npf_wgts,
+  .hero-enquiry-card .npf_wgts iframe {
+    height: 410px !important;
+    min-height: 410px !important;
   }
 
   .hero-info-bar {
-    padding: 0.65rem 0.5rem !important;
+    padding: 0.4rem 0.35rem !important;
   }
 
   .hero-info-item {
@@ -338,7 +541,7 @@ img {
     border-right: none !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
     font-size: 0.8rem !important;
-    padding: 0.5rem 0.35rem !important;
+    padding: 0.45rem 0.35rem !important;
   }
 
   .hero-info-item:last-child {
@@ -400,21 +603,28 @@ img {
   }
 }
 
-/* --- Tuition table scroll on narrow screens --- */
+/* --- Tuition / Fees Structure: mobile --- */
 @media screen and (max-width: 575px) {
   .tuition-table-wrap {
-    overflow-x: auto;
+    overflow: visible !important;
     -webkit-overflow-scrolling: touch;
   }
 
   .tuition-table {
-    min-width: 280px;
+    min-width: 0 !important;
+    width: 100% !important;
   }
 
   .programme-for-grid {
     grid-template-columns: 1fr !important;
-    max-width: 22rem;
+    max-width: 24rem !important;
+    row-gap: 48px !important;
     margin: 0 auto;
+    padding-top: 36px !important;
+  }
+
+  .programme-for-card {
+    min-height: 180px !important;
   }
 
   .career-pathways-cards {
@@ -426,6 +636,35 @@ img {
   .know-more-cta {
     width: 100%;
     max-width: 20rem;
+  }
+
+  .recognition-section {
+    min-height: 0 !important;
+    padding: 22px 0 32px !important;
+  }
+
+  .recognition-title {
+    font-size: clamp(1.35rem, 6.2vw, 1.7rem) !important;
+    margin-bottom: 16px !important;
+    padding: 0 4px;
+  }
+
+  .recognition-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    overflow: visible !important;
+  }
+
+  .recognition-grid .rec-card {
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    flex: none !important;
+  }
+
+  .recognition-grid .rec-card-main {
+    grid-column: 1 / -1 !important;
   }
 }
 
@@ -457,17 +696,75 @@ img {
   }
 
   .hero-right {
-    flex: 1 1 40%;
+    flex: 1 1 100%;
     order: 3;
-    max-width: 18rem !important;
+    max-width: 100% !important;
+    width: 100% !important;
   }
 
   .hero-enquiry-card {
-    min-height: 14rem !important;
-    max-height: 18rem !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    height: auto !important;
+    overflow: visible !important;
   }
 
   .hero-npf-scroll {
-    max-height: 12rem !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .hero-enquiry-card .npf_wgts,
+  .hero-enquiry-card .npf_wgts iframe {
+    height: 380px !important;
+    min-height: 380px !important;
+  }
+}
+
+/* --- Enquire Now section: mobile --- */
+@media screen and (max-width: 991px) {
+  .enquire-heading {
+    font-size: clamp(1.75rem, 5vw, 2.25rem) !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .enquire-card {
+    border-radius: 24px !important;
+    flex-direction: column !important;
+  }
+
+  .enquire-form-panel {
+    padding: 1.35rem 1.1rem 1.2rem !important;
+  }
+
+  .enquire-info-panel {
+    padding: 1.5rem 1.25rem 1.75rem !important;
+  }
+
+  .enquire-npf-scroll {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .enquire-form-panel .npf_wgts,
+  .enquire-form-panel .npf_wgts iframe {
+    min-height: 440px !important;
+    height: 440px !important;
+  }
+
+  .enquire-info-panel .info-section h2 {
+    font-size: clamp(1.25rem, 4vw, 1.6rem) !important;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .enquire-form-panel {
+    padding: 1.15rem 0.9rem 1rem !important;
+  }
+
+  .enquire-form-panel .npf_wgts,
+  .enquire-form-panel .npf_wgts iframe {
+    min-height: 460px !important;
+    height: 460px !important;
   }
 }

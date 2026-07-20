@@ -6,7 +6,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title>B.Sc. in Finance & Entrepreneurship - O.P. Jindal Global University</title>
+    <title>M.Sc. in Entrepreneurship, Innovation & Start-ups - O.P. Jindal Global University</title>
     <link rel="shortcut icon" type="image/x-icon" href="https://jguonline.edu.in/public/frontend/assets/img/favicon.ico">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
@@ -17,8 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     
-        <link rel="stylesheet" href="style.css?v=202607102300">
-        <link rel="stylesheet" href="responsive.css?v=202607101900">
+        <link rel="stylesheet" href="style.css?v=202607201150">
+        <link rel="stylesheet" href="responsive.css?v=202607201150">
 
     <!-- Critical: hero layout; enquiry form scrolls inside card only -->
     <style>
@@ -60,7 +60,7 @@
         width: auto !important;
       }
 
-      .hero-section .header-logo-jsbf {
+      .hero-section .header-logo-ideate {
         height: 6.5rem !important;
         max-height: 6.5rem !important;
         width: auto !important;
@@ -95,11 +95,12 @@
       }
 
       .hero-section .hero-title {
-        font-size: clamp(2rem, 3.4vw, 2.85rem) !important;
+        font-size: clamp(1.75rem, 3vw, 2.5rem) !important;
+        line-height: 1.16 !important;
       }
 
       .hero-section .hero-subtitle {
-        font-size: clamp(0.95rem, 1.4vw, 1.15rem) !important;
+        font-size: clamp(0.9rem, 1.3vw, 1.1rem) !important;
         font-weight: 800 !important;
       }
 
@@ -142,7 +143,7 @@
         }
 
         .hero-section .header-logo-jgu,
-        .hero-section .header-logo-jsbf {
+        .hero-section .header-logo-ideate {
           height: 3.5rem !important;
           max-height: 3.5rem !important;
         }
@@ -157,19 +158,68 @@
         }
 
         .hero-section .hero-right {
-          width: min(100%, 30rem) !important;
-          max-width: min(100%, 30rem) !important;
+          width: 100% !important;
+          max-width: min(100%, 28rem) !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
           margin-bottom: clamp(1.25rem, 4vw, 2rem) !important;
         }
 
         .hero-section .hero-enquiry-card {
-          min-height: 18rem !important;
-          max-height: min(32rem, 78vh) !important;
+          min-height: 0 !important;
+          max-height: none !important;
+          height: auto !important;
+          padding: 1.25rem 1.1rem 1.1rem !important;
+          border-radius: 1.15rem !important;
+          overflow: visible !important;
         }
 
         .hero-section .hero-npf-scroll {
-          max-height: min(360px, 54vh) !important;
-          overflow-y: auto !important;
+          max-height: none !important;
+          overflow: visible !important;
+        }
+
+        .hero-section .hero-enquiry-card .npf_wgts,
+        .hero-section .hero-enquiry-card .npf_wgts iframe {
+          height: 420px !important;
+          min-height: 420px !important;
+          max-height: none !important;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .hero-section .hero-right {
+          width: 100% !important;
+          max-width: 100% !important;
+          padding: 0 0.25rem !important;
+        }
+
+        .hero-section .hero-enquiry-card {
+          padding: 1.15rem 0.95rem 1rem !important;
+          border-radius: 1rem !important;
+        }
+
+        .hero-section .hero-enquiry-card h3 {
+          font-size: 1.1rem !important;
+          margin-bottom: 0.85rem !important;
+        }
+
+        .hero-section .hero-enquiry-card .npf_wgts,
+        .hero-section .hero-enquiry-card .npf_wgts iframe {
+          height: 440px !important;
+          min-height: 440px !important;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        .hero-section .hero-enquiry-card {
+          padding: 1rem 0.8rem 0.9rem !important;
+        }
+
+        .hero-section .hero-enquiry-card .npf_wgts,
+        .hero-section .hero-enquiry-card .npf_wgts iframe {
+          height: 460px !important;
+          min-height: 460px !important;
         }
       }
 
@@ -221,7 +271,7 @@
           width: auto !important;
         }
 
-        .hero-section .header-logo-jsbf {
+        .hero-section .header-logo-ideate {
           height: clamp(5.1rem, 15.8vh, 10rem) !important;
           max-height: clamp(5.1rem, 15.8vh, 10rem) !important;
           width: auto !important;
@@ -245,24 +295,24 @@
         }
 
         .hero-section .hero-title {
-          font-size: clamp(2rem, 6.6vh, 3.9rem) !important;
-          line-height: 1.12 !important;
+          font-size: clamp(1.75rem, 5vh, 2.85rem) !important;
+          line-height: 1.14 !important;
         }
 
         .hero-section .hero-title-rule {
-          margin-top: clamp(0.5rem, 1.7vh, 1.1rem) !important;
+          margin-top: clamp(0.4rem, 1.4vh, 0.9rem) !important;
         }
 
         .hero-section .hero-subtitle {
-          font-size: clamp(1rem, 2.9vh, 1.65rem) !important;
-          margin-top: clamp(0.75rem, 2.4vh, 1.55rem) !important;
-          line-height: 1.4 !important;
+          font-size: clamp(0.9rem, 2.4vh, 1.35rem) !important;
+          margin-top: clamp(0.6rem, 1.9vh, 1.25rem) !important;
+          line-height: 1.38 !important;
         }
 
         .hero-section .hero-description {
-          font-size: clamp(0.98rem, 2.45vh, 1.45rem) !important;
-          margin-top: clamp(0.6rem, 1.9vh, 1.25rem) !important;
-          line-height: 1.55 !important;
+          font-size: clamp(0.9rem, 2.1vh, 1.25rem) !important;
+          margin-top: clamp(0.5rem, 1.5vh, 1rem) !important;
+          line-height: 1.52 !important;
         }
 
         .hero-section .btn-apply-now {
@@ -388,29 +438,29 @@
           max-height: clamp(3rem, 8.6vh, 5rem) !important;
         }
 
-        .hero-section .header-logo-jsbf {
+        .hero-section .header-logo-ideate {
           height: clamp(3.4rem, 9.6vh, 5.6rem) !important;
           max-height: clamp(3.4rem, 9.6vh, 5.6rem) !important;
         }
 
         .hero-section .hero-title {
-          font-size: clamp(1.35rem, 4.5vh, 2rem) !important;
-          line-height: 1.08 !important;
+          font-size: clamp(1.3rem, 4vh, 1.85rem) !important;
+          line-height: 1.1 !important;
         }
 
         .hero-section .hero-title-rule {
-          margin-top: clamp(0.3rem, 1vh, 0.5rem) !important;
+          margin-top: clamp(0.28rem, 0.95vh, 0.5rem) !important;
         }
 
         .hero-section .hero-subtitle {
-          font-size: clamp(0.78rem, 2vh, 0.98rem) !important;
-          margin-top: clamp(0.4rem, 1.3vh, 0.7rem) !important;
+          font-size: clamp(0.76rem, 1.85vh, 0.95rem) !important;
+          margin-top: clamp(0.38rem, 1.2vh, 0.65rem) !important;
           line-height: 1.32 !important;
         }
 
         .hero-section .hero-description {
-          font-size: clamp(0.76rem, 1.85vh, 0.95rem) !important;
-          margin-top: clamp(0.3rem, 1vh, 0.55rem) !important;
+          font-size: clamp(0.75rem, 1.75vh, 0.92rem) !important;
+          margin-top: clamp(0.28rem, 0.95vh, 0.55rem) !important;
           line-height: 1.4 !important;
         }
 
@@ -478,7 +528,7 @@
     <div class="hero-header">
       <div class="header-logos">
         <img src="assets/logo-jgu.png" class="header-logo-img header-logo-jgu" alt="O.P. Jindal Global University Logo">
-        <img src="assets/logo-jsbf.png" class="header-logo-img header-logo-jsbf" alt="Jindal School of Banking & Finance Logo">
+        <img src="assets/logo-ideate-lab.png?v=1" class="header-logo-img header-logo-ideate" alt="Ideate Lab Logo">
       </div>
     </div>
 
@@ -488,23 +538,23 @@
       <div class="hero-left">
         <h1 class="hero-title">
           <span class="hero-title-line">
-            <span class="hero-title-base">B.Sc. in </span><span class="hero-title-finance">Finance &amp;</span>
+            <span class="hero-title-base">M.Sc. in </span><span class="hero-title-finance">Entrepreneurship,</span>
           </span>
-          <span class="hero-title-line hero-title-entrepreneurship">Entrepreneurship</span>
+          <span class="hero-title-line hero-title-entrepreneurship">Innovation &amp; Start-ups</span>
         </h1>
         <div class="hero-title-rule" aria-hidden="true"></div>
         <p class="hero-subtitle">
           <span class="hero-subtitle-line">LEAD INNOVATION.</span>
           <span class="hero-subtitle-line">BUILD SUSTAINABLE BUSINESSES. CREATE IMPACT.</span>
         </p>
-        <p class="hero-description">A future-focused undergraduate programme designed to combine strong financial foundations with entrepreneurial thinking, preparing you to navigate and lead in a digital-first economy.</p>
+        <p class="hero-description">A comprehensive programme combining strategic thinking, startup execution, and global business insights to prepare you for entrepreneurial success.</p>
         <button type="button" class="npfWidgetButton npfWidget-8dde336570bbae6c3bea459b0290744e hero-npf-trigger" tabindex="-1" aria-hidden="true">Apply</button>
         <a href="#" class="btn-apply-now" id="heroApplyNowBtn" role="button">APPLY NOW</a>
       </div>
 
       <div class="hero-center">
         <div class="hero-student-stack">
-          <img src="assets/hero-man-removebg-preview.png" alt="Professional with laptop" class="hero-student-img">
+          <img src="assets/hero-man-removebg-preview.png?v=3" alt="Professional with laptop" class="hero-student-img">
         </div>
       </div>
 
@@ -522,16 +572,16 @@
   <div class="hero-info-bar">
     <div class="hero-info-inner">
       <div class="hero-info-item">
-        <strong>Undergraduate Degree</strong>
+        <strong>Postgraduate Degree</strong>
       </div>
       <div class="hero-info-item">
-        <strong>Duration: 3 Years</strong>
+        <strong>Duration: 12 Months</strong>
       </div>
       <div class="hero-info-item">
         <strong>Fully Online Programme</strong>
       </div>
       <div class="hero-info-item">
-        <strong>Programme Fee: ₹2,20,000</strong>
+        <strong>Programme Fee: ₹2,75,000</strong>
       </div>
       <div class="hero-info-item">
         <strong>Easy EMI Option Available</strong>
@@ -550,65 +600,65 @@
                 <div class="features-slider-viewport" id="featuresSlider">
                         <div class="features-slide">
                             <div class="feature-card">
-                                <img src="assets/feature-finance-fundamentals.png" alt="Strong finance fundamentals" class="card-img">
+                                <img src="assets/feature-idea-scalable.png?v=1" alt="From idea to scalable venture" class="card-img">
                                 <div class="card-overlay">
-                                    <h3 class="card-title">Strong Finance Fundamentals</h3>
-                                    <p class="card-text">Master accounting, corporate finance, and financial markets.</p>
+                                    <h3 class="card-title">From Idea to Scalable Venture</h3>
+                                    <p class="card-text">Learn the complete startup journey—from ideation to growth and exit.</p>
                                 </div>
                             </div>
                             <div class="feature-card">
-                                <img src="assets/feature-entrepreneurial-mindset.png" alt="Entrepreneurial mindset" class="card-img">
+                                <img src="assets/feature-innovation-first.png?v=1" alt="Innovation-first approach" class="card-img">
                                 <div class="card-overlay">
-                                    <h3 class="card-title">Entrepreneurial Mindset</h3>
-                                    <p class="card-text">Learn to build, scale, and manage business ventures.</p>
+                                    <h3 class="card-title">Innovation-First Approach</h3>
+                                    <p class="card-text">Apply design thinking to build practical, user-focused solutions.</p>
                                 </div>
                             </div>
                             <div class="feature-card">
-                                <img src="assets/feature-ai-fintech.png" alt="AI, FinTech and data exposure" class="card-img">
+                                <img src="assets/feature-capstone-project.png?v=1" alt="Hands-on capstone project" class="card-img">
                                 <div class="card-overlay">
-                                    <h3 class="card-title">AI, FinTech &amp; Data Exposure</h3>
-                                    <p class="card-text">Stay ahead with future-focused financial technologies.</p>
+                                    <h3 class="card-title">Hands-on Capstone Project</h3>
+                                    <p class="card-text">Work on a real startup idea or business challenge.</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="features-slide">
                             <div class="feature-card">
-                                <img src="assets/feature-hands-on-learning.png" alt="Hands-on learning" class="card-img">
+                                <img src="assets/feature-startup-curriculum.png?v=1" alt="Startup-centric curriculum" class="card-img">
                                 <div class="card-overlay">
-                                    <h3 class="card-title">Hands-On Learning</h3>
-                                    <p class="card-text">Case studies, simulations, and real-world applications.</p>
+                                    <h3 class="card-title">Startup-Centric Curriculum</h3>
+                                    <p class="card-text">Focus on funding, strategy, risk, and scaling ventures.</p>
                                 </div>
                             </div>
                             <div class="feature-card">
-                                <img src="assets/feature-industry-tools.png" alt="Industry-relevant tools" class="card-img">
+                                <img src="assets/feature-problem-solving.png?v=1" alt="Real-world problem solving" class="card-img">
                                 <div class="card-overlay">
-                                    <h3 class="card-title">Industry-Relevant Tools</h3>
-                                    <p class="card-text">Work with Python, Tableau, and data-driven frameworks.</p>
+                                    <h3 class="card-title">Real-World Problem Solving</h3>
+                                    <p class="card-text">Tackle market entry, uncertainty, and operational challenges.</p>
                                 </div>
                             </div>
                             <div class="feature-card">
-                                <img src="assets/feature-interdisciplinary.png" alt="Interdisciplinary approach" class="card-img">
+                                <img src="assets/feature-leadership-founders.png?v=1" alt="Leadership for founders" class="card-img">
                                 <div class="card-overlay">
-                                    <h3 class="card-title">Interdisciplinary Approach</h3>
-                                    <p class="card-text">Blend finance, business, technology, and innovation.</p>
+                                    <h3 class="card-title">Leadership for Founders</h3>
+                                    <p class="card-text">Build the skills to lead teams and grow businesses.</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="features-slide features-slide--pair">
                             <div class="feature-card">
-                                <img src="assets/feature-career-curriculum.png" alt="Career-focused curriculum" class="card-img">
+                                <img src="assets/feature-funding-insights.png?v=1" alt="Funding and financial insights" class="card-img">
                                 <div class="card-overlay">
-                                    <h3 class="card-title">Career-Focused Curriculum</h3>
-                                    <p class="card-text">Prepare for roles across finance, consulting, and startups.</p>
+                                    <h3 class="card-title">Funding &amp; Financial Insights</h3>
+                                    <p class="card-text">Understand venture capital, investments, and startup finance.</p>
                                 </div>
                             </div>
                             <div class="feature-card">
-                                <img src="assets/feature-online-flexibility.png" alt="100% online flexibility" class="card-img">
+                                <img src="assets/feature-flexible-learning.png?v=1" alt="Flexible learning experience" class="card-img">
                                 <div class="card-overlay">
-                                    <h3 class="card-title">100% Online Flexibility</h3>
-                                    <p class="card-text">Learn from anywhere without compromising quality.</p>
+                                    <h3 class="card-title">Flexible Learning Experience</h3>
+                                    <p class="card-text">Study online with on-campus residency exposure.</p>
                                 </div>
                             </div>
                         </div>
@@ -621,35 +671,29 @@
 <section class="programme-overview-section section-global">
   <div class="container programme-overview-container">
     <div class="programme-overview-inner">
-      <div class="programme-overview-content">
-        <h2 class="programme-overview-heading">Programme Overview</h2>
-        <p class="programme-overview-text">
-          The <strong>B.Sc. in Finance &amp; Entrepreneurship (Online)</strong> is a 3-year undergraduate programme by O.P. Jindal Global University, designed to build strong financial foundations and entrepreneurial skills for today's evolving business landscape.
-        </p>
-        <p class="programme-overview-text">
-          The curriculum blends finance, business, and entrepreneurship with FinTech, data analytics, and artificial intelligence, helping learners understand how money, innovation, and technology work together in the real world.
-        </p>
-        <p class="programme-overview-text">
-          Delivered in a 100% online format, the programme combines academic learning with practical exposure through case studies, simulations, masterclasses, and hands-on tools.
-        </p>
-        <p class="programme-overview-text">
-          With a focus on real-world application and career readiness, it prepares learners for roles in finance, consulting, startups, or to build their own ventures.
-        </p>
-      </div>
-
       <div class="programme-overview-media">
         <figure class="programme-overview-campus">
-          <img src="assets/programme-campus.png?v=2" alt="O.P. Jindal Global University campus" class="programme-overview-img">
+          <img src="assets/programme-campus.png?v=3" alt="O.P. Jindal Global University campus" class="programme-overview-img">
         </figure>
         <div class="programme-overview-side">
           <a href="#" class="programme-learn-more-btn npfWidgetButton npfWidget-8dde336570bbae6c3bea459b0290744e">
             <span class="programme-learn-more-text">Learn More</span>
-            <span class="programme-learn-more-arrow" aria-hidden="true">&#8592;</span>
+            <span class="programme-learn-more-arrow" aria-hidden="true">&#8594;</span>
           </a>
           <figure class="programme-overview-finance">
-            <img src="assets/programme-fintech.png?v=2" alt="Finance and technology visual" class="programme-overview-img">
+            <img src="assets/programme-startup.png?v=1" alt="Startup growth and innovation visual" class="programme-overview-img">
           </figure>
         </div>
+      </div>
+
+      <div class="programme-overview-content">
+        <h2 class="programme-overview-heading">Programme Overview</h2>
+        <p class="programme-overview-text">
+          The <strong>Master's in Entrepreneurship, Innovation &amp; Start-ups</strong> is a 1-year postgraduate programme offered by IDEATE Lab, JGU's innovation and entrepreneurship hub, designed to help you build, launch, and scale ventures in today's fast-moving startup ecosystem.
+        </p>
+        <p class="programme-overview-text">
+          The curriculum combines strategic thinking, financial understanding, and innovation frameworks to help you turn ideas into viable businesses and navigate real startup challenges. Delivered through a <strong>flexible online format</strong> with on-campus residencies, the programme offers both convenience and practical exposure to real-world entrepreneurial environments.
+        </p>
       </div>
     </div>
   </div>
@@ -667,19 +711,19 @@
               <div class="skill-card-inner">
                 <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-financial.png" alt=""></div>
                 <div class="skill-card-body">
-                  <h3 class="skill-card-title">Financial &amp; Market Expertise</h3>
+                  <h3 class="skill-card-title">Entrepreneurial Thinking</h3>
                   <hr class="skill-card-line">
-                  <p class="skill-card-desc">Understand financial systems, investment analysis, corporate finance, and risk management.</p>
+                  <p class="skill-card-desc">Identify opportunities, evaluate ideas, and build viable business models.</p>
                 </div>
               </div>
             </div>
             <div class="skill-card">
               <div class="skill-card-inner">
-                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-analytics.png" alt=""></div>
+                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-analytical.png" alt=""></div>
                 <div class="skill-card-body">
-                  <h3 class="skill-card-title">Data Analytics &amp; AI in Finance</h3>
+                  <h3 class="skill-card-title">Strategic Decision-Making</h3>
                   <hr class="skill-card-line">
-                  <p class="skill-card-desc">Apply Python, data analytics, and machine learning to solve real-world financial problems.</p>
+                  <p class="skill-card-desc">Analyze complex business scenarios and make data-driven decisions.</p>
                 </div>
               </div>
             </div>
@@ -687,9 +731,9 @@
               <div class="skill-card-inner">
                 <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-fintech.png" alt=""></div>
                 <div class="skill-card-body">
-                  <h3 class="skill-card-title">FinTech &amp; Digital Ecosystems</h3>
+                  <h3 class="skill-card-title">Business Planning &amp; Pitching</h3>
                   <hr class="skill-card-line">
-                  <p class="skill-card-desc">Gain exposure to FinTech, digital finance, and emerging financial technologies.</p>
+                  <p class="skill-card-desc">Create compelling business plans and confidently present startup ideas.</p>
                 </div>
               </div>
             </div>
@@ -698,11 +742,11 @@
           <div class="skills-slide skills-slide--three">
             <div class="skill-card">
               <div class="skill-card-inner">
-                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-analytical.png" alt=""></div>
+                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-analytics.png" alt=""></div>
                 <div class="skill-card-body">
-                  <h3 class="skill-card-title">Analytical Decision-Making</h3>
+                  <h3 class="skill-card-title">Financial &amp; Investment Understanding</h3>
                   <hr class="skill-card-line">
-                  <p class="skill-card-desc">Interpret data, build insights, and drive data-backed business decisions.</p>
+                  <p class="skill-card-desc">Understand budgeting, valuation, and funding strategies for startups.</p>
                 </div>
               </div>
             </div>
@@ -710,19 +754,52 @@
               <div class="skill-card-inner">
                 <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-problem-solving.png" alt=""></div>
                 <div class="skill-card-body">
-                  <h3 class="skill-card-title">Problem-Solving Through Practice</h3>
+                  <h3 class="skill-card-title">Risk Assessment &amp; Management</h3>
                   <hr class="skill-card-line">
-                  <p class="skill-card-desc">Work on real-world projects, simulations, and case-based learning.</p>
+                  <p class="skill-card-desc">Identify potential risks and develop strategies to navigate uncertainty.</p>
                 </div>
               </div>
             </div>
             <div class="skill-card">
               <div class="skill-card-inner">
-                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-ethics.png" alt=""></div>
+                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-career.png" alt=""></div>
                 <div class="skill-card-body">
-                  <h3 class="skill-card-title">Ethics, Risk &amp; Governance</h3>
+                  <h3 class="skill-card-title">Leadership &amp; Team Management</h3>
                   <hr class="skill-card-line">
-                  <p class="skill-card-desc">Evaluate financial risks, regulations, and ethical implications in modern finance.</p>
+                  <p class="skill-card-desc">Lead teams effectively and build strong, high-performing startup cultures.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-slide skills-slide--three">
+            <div class="skill-card">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-problem-solving.png" alt=""></div>
+                <div class="skill-card-body">
+                  <h3 class="skill-card-title">Innovation &amp; Problem-Solving</h3>
+                  <hr class="skill-card-line">
+                  <p class="skill-card-desc">Apply creative thinking and design approaches to solve real-world challenges.</p>
+                </div>
+              </div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-communication.png" alt=""></div>
+                <div class="skill-card-body">
+                  <h3 class="skill-card-title">Effective Communication</h3>
+                  <hr class="skill-card-line">
+                  <p class="skill-card-desc">Communicate ideas clearly through presentations, proposals, and reports.</p>
+                </div>
+              </div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-analytics.png" alt=""></div>
+                <div class="skill-card-body">
+                  <h3 class="skill-card-title">Global Business Awareness</h3>
+                  <hr class="skill-card-line">
+                  <p class="skill-card-desc">Understand international markets, trends, and cross-border opportunities.</p>
                 </div>
               </div>
             </div>
@@ -731,21 +808,11 @@
           <div class="skills-slide skills-slide--three skills-slide--pair">
             <div class="skill-card">
               <div class="skill-card-inner">
-                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-communication.png" alt=""></div>
+                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-ethics.png" alt=""></div>
                 <div class="skill-card-body">
-                  <h3 class="skill-card-title">Communication &amp; Data Storytelling</h3>
+                  <h3 class="skill-card-title">Ethical &amp; Responsible Leadership</h3>
                   <hr class="skill-card-line">
-                  <p class="skill-card-desc">Present insights through visualisation, storytelling, and professional communication.</p>
-                </div>
-              </div>
-            </div>
-            <div class="skill-card">
-              <div class="skill-card-inner">
-                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-career.png" alt=""></div>
-                <div class="skill-card-body">
-                  <h3 class="skill-card-title">Career-Ready Skillset</h3>
-                  <hr class="skill-card-line">
-                  <p class="skill-card-desc">Develop industry-relevant skills for roles in finance, analytics, consulting, and startups.</p>
+                  <p class="skill-card-desc">Make business decisions that are sustainable, ethical, and socially responsible.</p>
                 </div>
               </div>
             </div>
@@ -757,6 +824,7 @@
         <button type="button" class="skills-dot active" data-index="0" aria-label="Slide 1" aria-selected="true"></button>
         <button type="button" class="skills-dot" data-index="1" aria-label="Slide 2" aria-selected="false"></button>
         <button type="button" class="skills-dot" data-index="2" aria-label="Slide 3" aria-selected="false"></button>
+        <button type="button" class="skills-dot" data-index="3" aria-label="Slide 4" aria-selected="false"></button>
       </div>
     </div>
   </div>
@@ -764,9 +832,6 @@
 <section class="know-more-section section-global">
   <div class="container know-more-container">
     <div class="know-more-inner">
-      <div class="know-more-media">
-        <img src="assets/know-more-brochure.png" alt="Entrepreneurship and finance growth illustration with rocket launch" class="know-more-img">
-      </div>
       <div class="know-more-content">
         <h3 class="know-more-title">Need to know more?</h3>
         <p class="know-more-lead">Explore the complete programme details.</p>
@@ -774,6 +839,9 @@
           Download the brochure or visit the website to view the detailed curriculum, course structure, credits, learning outcomes, and faculty profiles.
         </p>
         <a href="#" class="btn know-more-cta fw-bold npfWidgetButton npfWidget-8dde336570bbae6c3bea459b0290744e">DOWNLOAD BROCHURE</a>
+      </div>
+      <div class="know-more-media">
+        <img src="assets/know-more-brochure.png?v=2" alt="Innovation lightbulb with digital data network" class="know-more-img">
       </div>
     </div>
   </div>
@@ -811,22 +879,18 @@
               </tr>
               <tr>
                 <td>1st Installment</td>
-                <td>INR 65,000</td>
+                <td>INR 1,25,000</td>
                 <td>Before Batch Commencement</td>
               </tr>
               <tr>
                 <td>2nd Installment</td>
-                <td>INR 65,000</td>
-                <td>By 30th Jul 2027</td>
-              </tr>
-              <tr>
-                <td>3rd Installment</td>
-                <td>INR 65,000</td>
-                <td>By 30th Jul 2028</td>
+                <td>INR 1,25,000</td>
+                <td>By 15th Jan 2027</td>
               </tr>
             </tbody>
           </table>
         </div>
+        <p class="tuition-fees-note"><em>Optional: Immersion programme for 1,50,000 INR, enquire now for more information.</em></p>
       </div>
 
       <div class="tuition-tab-panel" id="tuitionTabEligibility" role="tabpanel" aria-labelledby="tuitionTabBtnEligibility" hidden>
@@ -834,34 +898,15 @@
           <div class="tuition-eligibility-col">
             <h3 class="tuition-eligibility-heading">Eligibility:</h3>
             <div class="tuition-eligibility-block">
-              <p class="tuition-eligibility-label">Academic Requirement</p>
-              <p class="tuition-eligibility-desc"><em>Minimum 50% in Class 12 from a recognised board.</em></p>
+              <p class="tuition-eligibility-desc">An undergraduate degree in any discipline from a recognised university in India or abroad.</p>
             </div>
             <div class="tuition-eligibility-block">
-              <p class="tuition-eligibility-label">Subject Requirement</p>
-              <p class="tuition-eligibility-desc"><em>Must have studied at least one of the following:</em></p>
-              <p class="tuition-eligibility-highlight">Mathematics / Business Mathematics / Statistics / Business Studies</p>
+              <p class="tuition-eligibility-desc">Open to fresh graduates and working professionals.</p>
             </div>
-          </div>
-
-          <div class="tuition-eligibility-col">
-            <h3 class="tuition-eligibility-heading">Selection Criteria:</h3>
-            <p class="tuition-eligibility-intro">Admission is based on a multi-step evaluation process:</p>
-            <div class="tuition-step">
-              <p class="tuition-step-title">Step 1: Application Submission</p>
-              <p class="tuition-step-desc">Complete and submit the online application form.</p>
-            </div>
-            <div class="tuition-step">
-              <p class="tuition-step-title">Step 2: FACTA Assessment</p>
-              <p class="tuition-step-desc">Appear for the FACTA (Finance Aptitude and Critical Thinking Assessment) conducted by the university.</p>
-            </div>
-            <div class="tuition-step">
-              <p class="tuition-step-title">Step 3: Personal Interview</p>
-              <p class="tuition-step-desc">Shortlisted candidates will be invited for a personal interview.</p>
-            </div>
-            <div class="tuition-step">
-              <p class="tuition-step-title">Step 4: Final Selection</p>
-              <p class="tuition-step-desc">Admission is granted based on overall performance across the assessment and interview.</p>
+            <div class="tuition-eligibility-block">
+              <p class="tuition-eligibility-label">Government-issued ID proof required:</p>
+              <p class="tuition-eligibility-desc">a. Indian applicants: Aadhaar Card / PAN Card / Voter ID</p>
+              <p class="tuition-eligibility-desc">b. International applicants: Passport</p>
             </div>
           </div>
         </div>
@@ -927,42 +972,50 @@
     <div class="programme-for-grid">
       <article class="programme-for-card">
         <div class="programme-for-icon" aria-hidden="true">
-          <img src="assets/programme-for-icon-1.png" alt="" class="programme-for-icon-img">
+          <img src="assets/programme-for-icon-1.png?v=2" alt="" class="programme-for-icon-img">
         </div>
-        <h3 class="programme-for-card-title">Aspiring Finance Professionals</h3>
-        <p class="programme-for-card-text">Build a foundation in finance, accounting, and financial markets.</p>
+        <h3 class="programme-for-card-title">Aspiring Entrepreneurs</h3>
+        <p class="programme-for-card-text">Build and launch your own startup from scratch.</p>
       </article>
 
       <article class="programme-for-card">
         <div class="programme-for-icon" aria-hidden="true">
-          <img src="assets/programme-for-icon-2.png" alt="" class="programme-for-icon-img">
+          <img src="assets/programme-for-icon-2.png?v=2" alt="" class="programme-for-icon-img">
         </div>
-        <h3 class="programme-for-card-title">Future Entrepreneurs</h3>
-        <p class="programme-for-card-text">Learn to build and scale ventures in a dynamic economy.</p>
+        <h3 class="programme-for-card-title">Early-Stage Founders</h3>
+        <p class="programme-for-card-text">Scale your venture with the right strategy and structure.</p>
       </article>
 
       <article class="programme-for-card">
         <div class="programme-for-icon" aria-hidden="true">
-          <img src="assets/programme-for-icon-3.png" alt="" class="programme-for-icon-img">
+          <img src="assets/programme-for-icon-3.png?v=2" alt="" class="programme-for-icon-img">
         </div>
-        <h3 class="programme-for-card-title">Business-Oriented Students</h3>
-        <p class="programme-for-card-text">Understand how finance, business, and innovation connect.</p>
+        <h3 class="programme-for-card-title">Working Professionals</h3>
+        <p class="programme-for-card-text">Transition into startup, product, or innovation roles.</p>
       </article>
 
       <article class="programme-for-card">
         <div class="programme-for-icon" aria-hidden="true">
-          <img src="assets/programme-for-icon-4.png" alt="" class="programme-for-icon-img">
+          <img src="assets/programme-for-icon-4.png?v=2" alt="" class="programme-for-icon-img">
         </div>
-        <h3 class="programme-for-card-title">Tech-Aware Learners</h3>
-        <p class="programme-for-card-text">Explore data analytics, AI, and FinTech applications in finance.</p>
+        <h3 class="programme-for-card-title">Innovation Enthusiasts</h3>
+        <p class="programme-for-card-text">Solve real-world problems using design thinking and strategy.</p>
       </article>
 
       <article class="programme-for-card">
         <div class="programme-for-icon" aria-hidden="true">
-          <img src="assets/programme-for-icon-5.png" alt="" class="programme-for-icon-img">
+          <img src="assets/programme-for-icon-5.png?v=2" alt="" class="programme-for-icon-img">
         </div>
-        <h3 class="programme-for-card-title">Career-Focused Students</h3>
-        <p class="programme-for-card-text">Develop skills for real-world, industry-relevant roles.</p>
+        <h3 class="programme-for-card-title">Family Business Owners</h3>
+        <p class="programme-for-card-text">Modernise and grow your existing business.</p>
+      </article>
+
+      <article class="programme-for-card">
+        <div class="programme-for-icon" aria-hidden="true">
+          <img src="assets/programme-for-icon-6.png?v=2" alt="" class="programme-for-icon-img">
+        </div>
+        <h3 class="programme-for-card-title">Graduates</h3>
+        <p class="programme-for-card-text">Explore future-ready careers in entrepreneurship and innovation.</p>
       </article>
     </div>
   </div>
@@ -971,7 +1024,7 @@
 <section class="career-pathways-section section-global">
   <div class="container career-pathways-container">
     <div class="career-pathways-panel">
-      <img class="career-pathways-bg" src="assets/career-pathways-bg.png" alt="" aria-hidden="true">
+      <img class="career-pathways-bg" src="assets/career-pathways-bg.png?v=2" alt="" aria-hidden="true">
       <div class="career-pathways-overlay" aria-hidden="true"></div>
       <div class="career-pathways-inner">
         <h2 class="career-pathways-title">Career<br>Pathways</h2>
@@ -979,42 +1032,50 @@
         <div class="career-pathways-cards">
           <article class="career-pathway-card">
             <div class="career-pathway-icon">
-              <img src="assets/career-pathway-icon-1.png" alt="" aria-hidden="true">
+              <img src="assets/career-pathway-icon-1.png?v=2" alt="" aria-hidden="true">
             </div>
-            <h3 class="career-pathway-card-title">Finance Roles</h3>
-            <p class="career-pathway-card-text">Opportunities in financial analysis, corporate finance, and investment domains.</p>
+            <h3 class="career-pathway-card-title">Startup Founder / Co-Founder</h3>
+            <p class="career-pathway-card-text">Launch and build your own venture from idea to scale.</p>
           </article>
 
           <article class="career-pathway-card">
             <div class="career-pathway-icon">
-              <img src="assets/career-pathway-icon-2.png" alt="" aria-hidden="true">
+              <img src="assets/career-pathway-icon-2.png?v=2" alt="" aria-hidden="true">
             </div>
-            <h3 class="career-pathway-card-title">Consulting</h3>
-            <p class="career-pathway-card-text">Roles across business and financial consulting environments.</p>
+            <h3 class="career-pathway-card-title">Product Manager</h3>
+            <p class="career-pathway-card-text">Drive product strategy, development, and market growth.</p>
           </article>
 
           <article class="career-pathway-card">
             <div class="career-pathway-icon">
-              <img src="assets/career-pathway-icon-3.png" alt="" aria-hidden="true">
+              <img src="assets/career-pathway-icon-3.png?v=2" alt="" aria-hidden="true">
             </div>
-            <h3 class="career-pathway-card-title">Startups &amp; Entrepreneurship</h3>
-            <p class="career-pathway-card-text">Build or work within startup ecosystems and new ventures.</p>
+            <h3 class="career-pathway-card-title">Business Strategist</h3>
+            <p class="career-pathway-card-text">Work on growth, market entry, and scaling strategies for startups.</p>
           </article>
 
           <article class="career-pathway-card">
             <div class="career-pathway-icon">
-              <img src="assets/career-pathway-icon-4.png" alt="" aria-hidden="true">
+              <img src="assets/career-pathway-icon-4.png?v=2" alt="" aria-hidden="true">
             </div>
-            <h3 class="career-pathway-card-title">Digital Economy Roles</h3>
-            <p class="career-pathway-card-text">Careers in technology-driven and evolving business environments.</p>
+            <h3 class="career-pathway-card-title">Innovation Lead / Consultant</h3>
+            <p class="career-pathway-card-text">Help organisations build new products, services, and business models.</p>
           </article>
 
           <article class="career-pathway-card">
             <div class="career-pathway-icon">
-              <img src="assets/career-pathway-icon-5.png" alt="" aria-hidden="true">
+              <img src="assets/career-pathway-icon-5.png?v=2" alt="" aria-hidden="true">
             </div>
-            <h3 class="career-pathway-card-title">Cross-Functional Opportunities</h3>
-            <p class="career-pathway-card-text">Apply skills across finance, business, and emerging industries.</p>
+            <h3 class="career-pathway-card-title">Venture Capital / Investment Roles</h3>
+            <p class="career-pathway-card-text">Evaluate startups and support funding decisions.</p>
+          </article>
+
+          <article class="career-pathway-card">
+            <div class="career-pathway-icon">
+              <img src="assets/career-pathway-icon-6.png?v=2" alt="" aria-hidden="true">
+            </div>
+            <h3 class="career-pathway-card-title">Startup Consultant / Advisor</h3>
+            <p class="career-pathway-card-text">Guide businesses on growth, operations, and innovation strategies.</p>
           </article>
         </div>
       </div>
@@ -1032,49 +1093,22 @@
       </h2>
     </div>
 
-    <div class="faculty-slider-wrap">
-      <button class="faculty-arrow prev" type="button" aria-label="Previous faculty"><i class="bi bi-chevron-left"></i></button>
-      <button class="faculty-arrow next" type="button" aria-label="Next faculty"><i class="bi bi-chevron-right"></i></button>
-
+    <div class="faculty-slider-wrap faculty-slider-wrap--static">
       <div class="faculty-track" id="facultyTrack">
         <article class="faculty-member">
           <div class="faculty-photo-frame">
-            <img class="faculty-photo" src="assets/faculty-1.png?v=6" alt="Prof. Ram B. Ramachandran">
+            <img class="faculty-photo" src="assets/faculty-1.png?v=7" alt="Prof. (Dr.) Tejpavan Singh Gandhok">
           </div>
-          <h5 class="faculty-name">Prof. Ram B. Ramachandran</h5>
-          <p class="faculty-role">Professor &amp; Vice Dean</p>
+          <h5 class="faculty-name">Prof. (Dr.) Tejpavan Singh Gandhok</h5>
+          <p class="faculty-role">Professor of Practice &amp; Director, IDEATE Lab</p>
         </article>
 
         <article class="faculty-member">
           <div class="faculty-photo-frame">
-            <img class="faculty-photo" src="assets/faculty-2.png?v=6" alt="Prof (Dr.) Hemant Manuj">
+            <img class="faculty-photo" src="assets/faculty-2.png?v=7" alt="Prof. (Dr.) Priyatej Kotipalli">
           </div>
-          <h5 class="faculty-name">Prof (Dr.) Hemant Manuj</h5>
-          <p class="faculty-role">Professor &amp; Executive Dean</p>
-        </article>
-
-        <article class="faculty-member">
-          <div class="faculty-photo-frame">
-            <img class="faculty-photo" src="assets/faculty-3.png?v=6" alt="Prof. (Dr.) Tarun Dhinga">
-          </div>
-          <h5 class="faculty-name">Prof. (Dr.) Tarun Dhinga</h5>
-          <p class="faculty-role">Professor &amp; Vice Dean</p>
-        </article>
-
-        <article class="faculty-member">
-          <div class="faculty-photo-frame">
-            <img class="faculty-photo" src="assets/faculty-4.png?v=6" alt="Prof. (Dr.) Prashant Sharma">
-          </div>
-          <h5 class="faculty-name">Prof. (Dr.) Prashant Sharma</h5>
-          <p class="faculty-role">Professor &amp; Vice Dean</p>
-        </article>
-
-        <article class="faculty-member">
-          <div class="faculty-photo-frame">
-            <img class="faculty-photo" src="assets/faculty-5.png?v=6" alt="Dr. Amlan Das Gupta">
-          </div>
-          <h5 class="faculty-name">Dr. Amlan Das Gupta</h5>
-          <p class="faculty-role">Associate Professor and Associate Dean (Research)</p>
+          <h5 class="faculty-name">Prof. (Dr.) Priyatej Kotipalli</h5>
+          <p class="faculty-role">Associate Professor and Deputy Director, IDEATE Labs &amp; Family Business Centre</p>
         </article>
       </div>
     </div>
@@ -1121,12 +1155,12 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                  Will I learn practical industry tools during the programme?
+                  What is the duration of the programme?
                 </button>
               </h2>
               <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqLeft">
                 <div class="accordion-body">
-                  Yes, learners gain exposure to tools and platforms such as Python, data visualisation tools, and AI-driven financial systems.
+                  The programme is 1 year (12 months) long.
                 </div>
               </div>
             </div>
@@ -1134,12 +1168,38 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                  Does the programme cover both AI and finance equally?
+                  What is the mode of learning?
                 </button>
               </h2>
               <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
                 <div class="accordion-body">
-                  The curriculum is designed to combine core finance concepts with artificial intelligence, data analytics, and FinTech applications.
+                  The programme is delivered in a flexible online format, along with on-campus residencies scheduled during non-peak periods.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  Are EMI or payment options available?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                <div class="accordion-body">
+                  Yes, easy EMI options are available to make the programme financially accessible.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  Do I need prior startup or business experience?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                <div class="accordion-body">
+                  No, prior experience is not required. The programme is designed for both beginners and those with some experience.
                 </div>
               </div>
             </div>
@@ -1150,26 +1210,39 @@
           <div class="accordion faq-accordion" id="faqRight">
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                  Are there hands-on projects or practical learning experiences?
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                  Will I get a recognised degree?
                 </button>
               </h2>
-              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqRight">
                 <div class="accordion-body">
-                  Yes, the programme includes projects, simulations, case studies, and industry-led learning experiences to build practical understanding.
+                  Yes, you will receive a Master&rsquo;s degree from O.P. Jindal Global University, recognised as an Institution of Eminence.
                 </div>
               </div>
             </div>
 
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                  What makes this programme different from a traditional finance degree?
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                  What kind of career opportunities can I expect?
                 </button>
               </h2>
-              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+              <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqRight">
                 <div class="accordion-body">
-                  Unlike conventional finance programmes, this degree integrates AI, machine learning, data analytics, and digital finance, preparing learners for evolving tech-driven industries.
+                  Graduates can pursue roles such as Startup Founder, Product Manager, Business Strategist, Innovation Lead, or Consultant, or build their own ventures.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                  Will there be practical learning or projects?
+                </button>
+              </h2>
+              <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                <div class="accordion-body">
+                  Yes, the programme includes a capstone project where you will work on a real startup idea or business challenge.
                 </div>
               </div>
             </div>
