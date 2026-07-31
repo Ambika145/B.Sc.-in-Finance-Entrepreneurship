@@ -17,8 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     
-        <link rel="stylesheet" href="style.css?v=202607102300">
-        <link rel="stylesheet" href="responsive.css?v=202607101900">
+        <link rel="stylesheet" href="style.css?v=202607311500">
+        <link rel="stylesheet" href="responsive.css?v=202607311500">
 
     <!-- Critical: hero layout; enquiry form scrolls inside card only -->
     <style>
@@ -616,6 +616,7 @@
 
                 <button class="features-arrow next" type="button" aria-label="Next feature">&#10095;</button>
             </div>
+            <div class="features-dots" id="featuresDots" aria-label="Feature slides"></div>
         </div>
     </section>
 <section class="programme-overview-section section-global">
@@ -623,18 +624,20 @@
     <div class="programme-overview-inner">
       <div class="programme-overview-content">
         <h2 class="programme-overview-heading">Programme Overview</h2>
-        <p class="programme-overview-text">
-          The <strong>B.Sc. in Finance &amp; Entrepreneurship (Online)</strong> is a 3-year undergraduate programme by O.P. Jindal Global University, designed to build strong financial foundations and entrepreneurial skills for today's evolving business landscape.
-        </p>
-        <p class="programme-overview-text">
-          The curriculum blends finance, business, and entrepreneurship with FinTech, data analytics, and artificial intelligence, helping learners understand how money, innovation, and technology work together in the real world.
-        </p>
-        <p class="programme-overview-text">
-          Delivered in a 100% online format, the programme combines academic learning with practical exposure through case studies, simulations, masterclasses, and hands-on tools.
-        </p>
-        <p class="programme-overview-text">
-          With a focus on real-world application and career readiness, it prepares learners for roles in finance, consulting, startups, or to build their own ventures.
-        </p>
+        <div class="programme-overview-texts">
+          <p class="programme-overview-text">
+            The <strong>B.Sc. in Finance &amp; Entrepreneurship (Online)</strong> is a 3-year undergraduate programme by O.P. Jindal Global University, designed to build strong financial foundations and entrepreneurial skills for today's evolving business landscape.
+          </p>
+          <p class="programme-overview-text">
+            The curriculum blends finance, business, and entrepreneurship with FinTech, data analytics, and artificial intelligence, helping learners understand how money, innovation, and technology work together in the real world.
+          </p>
+          <p class="programme-overview-text">
+            Delivered in a 100% online format, the programme combines academic learning with practical exposure through case studies, simulations, masterclasses, and hands-on tools.
+          </p>
+          <p class="programme-overview-text">
+            With a focus on real-world application and career readiness, it prepares learners for roles in finance, consulting, startups, or to build their own ventures.
+          </p>
+        </div>
       </div>
 
       <div class="programme-overview-media">
@@ -805,24 +808,24 @@
             </thead>
             <tbody>
               <tr>
-                <td>Registration Amount</td>
-                <td>INR 25,000</td>
-                <td>Upon acceptance of the offer letter</td>
+                <td data-label="Fee Category">Registration Amount</td>
+                <td data-label="Amount">INR 25,000</td>
+                <td data-label="Due Date">Upon acceptance of the offer letter</td>
               </tr>
               <tr>
-                <td>1st Installment</td>
-                <td>INR 65,000</td>
-                <td>Before Batch Commencement</td>
+                <td data-label="Fee Category">1st Installment</td>
+                <td data-label="Amount">INR 65,000</td>
+                <td data-label="Due Date">Before Batch Commencement</td>
               </tr>
               <tr>
-                <td>2nd Installment</td>
-                <td>INR 65,000</td>
-                <td>By 30th Jul 2027</td>
+                <td data-label="Fee Category">2nd Installment</td>
+                <td data-label="Amount">INR 65,000</td>
+                <td data-label="Due Date">By 30th Jul 2027</td>
               </tr>
               <tr>
-                <td>3rd Installment</td>
-                <td>INR 65,000</td>
-                <td>By 30th Jul 2028</td>
+                <td data-label="Fee Category">3rd Installment</td>
+                <td data-label="Amount">INR 65,000</td>
+                <td data-label="Due Date">By 30th Jul 2028</td>
               </tr>
             </tbody>
           </table>
@@ -1086,7 +1089,7 @@
   <div class="recognition-container">
     <h2 class="recognition-title">Recognitions and Accreditations</h2>
 
-    <div class="recognition-grid">
+    <div class="recognition-grid" id="recognitionGrid">
       <div class="rec-card rec-card-small">
         <img src="assets/recog-1-qs-top150.png" alt="TOP 150 Under 50 Globally - QS Young University Rankings 2022">
       </div>
@@ -1107,6 +1110,7 @@
         <img src="assets/recog-5-online-learning.png" alt="Ranked No. 1 Globally for Online Learning - THE 2024">
       </div>
     </div>
+    <div class="recognition-dots" id="recognitionDots" aria-label="Recognition slides"></div>
   </div>
 </section>
 <section class="faq-section section-global">
@@ -1249,6 +1253,92 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const grid = document.getElementById('recognitionGrid');
+  const dotsContainer = document.getElementById('recognitionDots');
+  if (!grid || !dotsContainer) return;
+
+  const cards = Array.from(grid.querySelectorAll('.rec-card'));
+  if (!cards.length) return;
+
+  let currentIndex = 0;
+
+  function isMobileRecognition() {
+    return window.matchMedia('(max-width: 767px)').matches;
+  }
+
+  function buildDots() {
+    dotsContainer.innerHTML = '';
+    if (!isMobileRecognition()) {
+      dotsContainer.hidden = true;
+      return;
+    }
+    dotsContainer.hidden = false;
+    cards.forEach(function (_card, index) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'recognition-dot' + (index === currentIndex ? ' active' : '');
+      btn.setAttribute('aria-label', 'Go to recognition ' + (index + 1));
+      btn.setAttribute('data-index', String(index));
+      dotsContainer.appendChild(btn);
+    });
+  }
+
+  function updateDots() {
+    var dots = dotsContainer.querySelectorAll('.recognition-dot');
+    dots.forEach(function (dot, index) {
+      dot.classList.toggle('active', index === currentIndex);
+    });
+  }
+
+  function goToCard(index) {
+    currentIndex = Math.max(0, Math.min(index, cards.length - 1));
+    var target = cards[currentIndex];
+    if (!target) return;
+    grid.scrollTo({
+      left: target.getBoundingClientRect().left - grid.getBoundingClientRect().left + grid.scrollLeft,
+      behavior: 'smooth'
+    });
+    updateDots();
+  }
+
+  function syncFromScroll() {
+    if (!isMobileRecognition()) return;
+    var scrollLeft = grid.scrollLeft;
+    var closestIndex = 0;
+    var smallestDiff = Infinity;
+    cards.forEach(function (card, index) {
+      var left = card.getBoundingClientRect().left - grid.getBoundingClientRect().left + grid.scrollLeft;
+      var diff = Math.abs(left - scrollLeft);
+      if (diff < smallestDiff) {
+        smallestDiff = diff;
+        closestIndex = index;
+      }
+    });
+    currentIndex = closestIndex;
+    updateDots();
+  }
+
+  function refresh() {
+    buildDots();
+    if (isMobileRecognition()) {
+      goToCard(currentIndex);
+    }
+  }
+
+  dotsContainer.addEventListener('click', function (e) {
+    var dot = e.target.closest('.recognition-dot');
+    if (!dot) return;
+    goToCard(parseInt(dot.getAttribute('data-index'), 10));
+  });
+
+  grid.addEventListener('scroll', syncFromScroll, { passive: true });
+  window.addEventListener('resize', refresh);
+  refresh();
+});
+</script>
+
  <script>
         function showTab(tabId) {
             // Hide all tab contents
@@ -1344,40 +1434,82 @@ document.addEventListener('DOMContentLoaded', function () {
   const viewport = document.getElementById('featuresSlider');
   const prevBtn = document.querySelector('.features-arrow.prev');
   const nextBtn = document.querySelector('.features-arrow.next');
+  const dotsContainer = document.getElementById('featuresDots');
 
   if (!viewport || !prevBtn || !nextBtn) return;
 
-  const slides = Array.from(viewport.querySelectorAll('.features-slide'));
-  if (!slides.length) return;
+  function isMobileFeatures() {
+    return window.matchMedia('(max-width: 767px)').matches;
+  }
+
+  function getItems() {
+    if (isMobileFeatures()) {
+      return Array.from(viewport.querySelectorAll('.feature-card'));
+    }
+    return Array.from(viewport.querySelectorAll('.features-slide'));
+  }
 
   let currentIndex = 0;
 
+  function buildDots(count) {
+    if (!dotsContainer) return;
+    dotsContainer.innerHTML = '';
+    if (!isMobileFeatures() || count <= 1) {
+      dotsContainer.hidden = true;
+      return;
+    }
+    dotsContainer.hidden = false;
+    for (var i = 0; i < count; i += 1) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'features-dot' + (i === currentIndex ? ' active' : '');
+      btn.setAttribute('aria-label', 'Go to feature ' + (i + 1));
+      btn.setAttribute('data-index', String(i));
+      dotsContainer.appendChild(btn);
+    }
+  }
+
+  function updateDots() {
+    if (!dotsContainer) return;
+    var dots = dotsContainer.querySelectorAll('.features-dot');
+    dots.forEach(function (dot, index) {
+      dot.classList.toggle('active', index === currentIndex);
+    });
+  }
+
   function goToSlide(index) {
-    currentIndex = Math.max(0, Math.min(index, slides.length - 1));
-    const target = slides[currentIndex];
+    var items = getItems();
+    if (!items.length) return;
+    currentIndex = Math.max(0, Math.min(index, items.length - 1));
+    var target = items[currentIndex];
 
     if (target) {
+      var left = target.getBoundingClientRect().left - viewport.getBoundingClientRect().left + viewport.scrollLeft;
       viewport.scrollTo({
-        left: target.offsetLeft,
+        left: left,
         behavior: 'smooth'
       });
     }
 
-    updateArrows();
+    updateArrows(items.length);
+    updateDots();
   }
 
-  function updateArrows() {
+  function updateArrows(total) {
+    var count = typeof total === 'number' ? total : getItems().length;
     prevBtn.disabled = currentIndex <= 0;
-    nextBtn.disabled = currentIndex >= slides.length - 1;
+    nextBtn.disabled = currentIndex >= count - 1;
   }
 
   function syncIndexFromScroll() {
-    const scrollLeft = viewport.scrollLeft;
-    let closestIndex = 0;
-    let smallestDiff = Infinity;
+    var items = getItems();
+    var scrollLeft = viewport.scrollLeft;
+    var closestIndex = 0;
+    var smallestDiff = Infinity;
 
-    slides.forEach(function (slide, index) {
-      const diff = Math.abs(slide.offsetLeft - scrollLeft);
+    items.forEach(function (item, index) {
+      var itemLeft = item.getBoundingClientRect().left - viewport.getBoundingClientRect().left + viewport.scrollLeft;
+      var diff = Math.abs(itemLeft - scrollLeft);
       if (diff < smallestDiff) {
         smallestDiff = diff;
         closestIndex = index;
@@ -1385,7 +1517,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     currentIndex = closestIndex;
-    updateArrows();
+    updateArrows(items.length);
+    updateDots();
+  }
+
+  function refresh() {
+    var items = getItems();
+    currentIndex = Math.min(currentIndex, Math.max(0, items.length - 1));
+    buildDots(items.length);
+    goToSlide(currentIndex);
   }
 
   prevBtn.addEventListener('click', function () {
@@ -1396,12 +1536,18 @@ document.addEventListener('DOMContentLoaded', function () {
     goToSlide(currentIndex + 1);
   });
 
-  viewport.addEventListener('scroll', syncIndexFromScroll, { passive: true });
-  window.addEventListener('resize', function () {
-    goToSlide(currentIndex);
-  });
+  if (dotsContainer) {
+    dotsContainer.addEventListener('click', function (e) {
+      var dot = e.target.closest('.features-dot');
+      if (!dot) return;
+      goToSlide(parseInt(dot.getAttribute('data-index'), 10));
+    });
+  }
 
-  goToSlide(0);
+  viewport.addEventListener('scroll', syncIndexFromScroll, { passive: true });
+  window.addEventListener('resize', refresh);
+
+  refresh();
 });
 </script>
 
@@ -1558,6 +1704,15 @@ fbq('track', 'PageView');
     &copy; 2026 O.P. Jindal Global University. All Rights Reserved
   </p>
 </footer>
+
+<div class="npf_chatbots" data-w="a8b32b8ab432456a971900791d70c15b" style="display:none;"></div>
+<script type="text/javascript">
+  var s = document.createElement("script");
+  s.type = "text/javascript";
+  s.async = true;
+  s.src = "https://chatbot.in8.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/e815e394ee244cd1a8dc3bebaf8d81bf/a8b32b8ab432456a971900791d70c15b";
+  document.body.appendChild(s);
+</script>
 </body>
 </html>
 

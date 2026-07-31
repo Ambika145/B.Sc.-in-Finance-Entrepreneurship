@@ -400,17 +400,8 @@ img {
   }
 }
 
-/* --- Tuition table scroll on narrow screens --- */
+/* --- Tuition: stacked cards on mobile (no horizontal scroll) --- */
 @media screen and (max-width: 575px) {
-  .tuition-table-wrap {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .tuition-table {
-    min-width: 280px;
-  }
-
   .programme-for-grid {
     grid-template-columns: 1fr !important;
     max-width: 22rem;
@@ -471,3 +462,490 @@ img {
     max-height: 12rem !important;
   }
 }
+
+/* ==========================================================================
+   Mobile-only layout updates (phones ≤767px) — desktop/tablet unchanged
+   ========================================================================== */
+
+.features-dots,
+.recognition-dots {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  /* --- 1. Enquire Now: horizontal form fields, no overflow --- */
+  .enquire-section {
+    padding: 36px 0 44px !important;
+  }
+
+  .enquire-section .enquire-container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    max-width: 100%;
+  }
+
+  .enquire-heading {
+    font-size: clamp(1.75rem, 7vw, 2.25rem) !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .enquire-card {
+    display: flex !important;
+    flex-direction: column !important;
+    border-radius: 24px !important;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .enquire-form-panel {
+    padding: 1.15rem 0.9rem 1rem !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .enquire-info-panel {
+    padding: 1.35rem 1.1rem 1.5rem !important;
+    width: 100% !important;
+    min-height: auto !important;
+  }
+
+  .enquire-npf-scroll {
+    max-height: none !important;
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+  }
+
+  .enquire-form-panel .npf_wgts,
+  .enquire-form-panel .npf_wgts iframe,
+  .enquire-section .npf_wgts,
+  .enquire-section .npf_wgts iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  /* Horizontal field layout on mobile */
+  .enquire-form-panel .npf_wgts form,
+  .enquire-form-panel .npf_wgts .row {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 10px 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .enquire-form-panel .npf_wgts .form-group {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .enquire-form-panel .npf_wgts [class*="col-"] {
+    flex: 1 1 calc(50% - 8px) !important;
+    max-width: calc(50% - 8px) !important;
+    width: calc(50% - 8px) !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .enquire-form-panel .npf_wgts [class*="col-12"],
+  .enquire-form-panel .npf_wgts .form-check,
+  .enquire-form-panel .npf_wgts button,
+  .enquire-form-panel .npf_wgts .btn,
+  .enquire-form-panel .npf_wgts [class*="submit"] {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .enquire-form-panel .npf_wgts input,
+  .enquire-form-panel .npf_wgts select,
+  .enquire-form-panel .npf_wgts textarea {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .enquire-info-panel .info-section h2 {
+    font-size: 1.35rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .enquire-info-panel .info-text {
+    font-size: 0.92rem !important;
+  }
+
+  /* --- 2. What's in it for you?: one card per slide --- */
+  .features-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .features-title {
+    font-size: clamp(1.65rem, 6.5vw, 2rem) !important;
+    margin-bottom: 22px !important;
+    padding: 0 12px;
+  }
+
+  .features-slider-wrap {
+    padding: 0 42px !important;
+  }
+
+  .features-slider-viewport {
+    gap: 0 !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .features-slide {
+    display: contents !important;
+  }
+
+  .features-section .feature-card {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    height: min(72vw, 380px) !important;
+    border-radius: 28px !important;
+    scroll-snap-align: start !important;
+    scroll-snap-stop: always !important;
+    margin: 0 !important;
+  }
+
+  .features-section .card-img {
+    border-radius: 28px !important;
+  }
+
+  .features-dots {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+    padding: 0 12px;
+  }
+
+  .features-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    background: rgba(26, 35, 126, 0.28);
+    cursor: pointer;
+  }
+
+  .features-dot.active {
+    background: #7b1fa2;
+    transform: scale(1.15);
+  }
+
+  /* --- 3. Recognitions: one card + dots --- */
+  .recognition-section {
+    min-height: 0 !important;
+    padding: 28px 0 36px !important;
+  }
+
+  .recognition-container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .recognition-title {
+    font-size: clamp(1.55rem, 6vw, 2rem) !important;
+    margin-bottom: 18px !important;
+  }
+
+  .recognition-grid {
+    display: flex !important;
+    gap: 14px !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 4px 4px 12px !important;
+    scrollbar-width: none;
+  }
+
+  .recognition-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .rec-card,
+  .rec-card-small,
+  .rec-card-main {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    height: min(72vw, 320px) !important;
+    scroll-snap-align: center !important;
+    scroll-snap-stop: always !important;
+    box-sizing: border-box !important;
+  }
+
+  .recognition-dots {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .recognition-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    background: rgba(26, 35, 126, 0.3);
+    cursor: pointer;
+  }
+
+  .recognition-dot.active {
+    background: #1a237e;
+    transform: scale(1.15);
+  }
+
+  /* --- 4. Fee Structure / Eligibility: no horizontal scroll --- */
+  .tuition-panel {
+    min-height: 0 !important;
+    padding: 36px 14px 32px !important;
+    overflow: hidden;
+  }
+
+  .tuition-content {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .tuition-tabs {
+    max-width: 100% !important;
+    margin-bottom: 22px !important;
+    padding: 4px !important;
+  }
+
+  .tuition-tab {
+    font-size: 0.85rem !important;
+    padding: 0.7rem 0.5rem !important;
+  }
+
+  .tuition-table-wrap {
+    overflow: visible !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+  }
+
+  .tuition-table {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    border-collapse: collapse;
+  }
+
+  .tuition-table thead {
+    display: none !important;
+  }
+
+  .tuition-table tbody {
+    display: block !important;
+    width: 100%;
+  }
+
+  .tuition-table tr {
+    display: block !important;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 14px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .tuition-table tr:last-child {
+    border-bottom: none;
+  }
+
+  .tuition-table td {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100% !important;
+    max-width: 100% !important;
+    border: none !important;
+    padding: 6px 0 !important;
+    text-align: left !important;
+    font-size: 0.9rem !important;
+    line-height: 1.4;
+    white-space: normal !important;
+    word-break: break-word;
+  }
+
+  .tuition-table td::before {
+    content: attr(data-label);
+    flex: 0 0 42%;
+    max-width: 42%;
+    font-weight: 700;
+    opacity: 0.92;
+  }
+
+  .tuition-eligibility-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    width: 100%;
+  }
+
+  .tuition-eligibility-col {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .tuition-eligibility-heading {
+    font-size: 1.15rem !important;
+  }
+
+  .tuition-eligibility-highlight {
+    font-size: 0.88rem !important;
+    line-height: 1.45;
+    word-break: break-word;
+  }
+
+  /* --- 5. Faculty: one full-width card --- */
+  .faculty-slider-wrap {
+    padding: 0 44px !important;
+  }
+
+  .faculty-track {
+    gap: 0 !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .faculty-member {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    scroll-snap-align: center !important;
+    scroll-snap-stop: always !important;
+    box-sizing: border-box;
+    padding: 0 4px;
+  }
+
+  .faculty-photo-frame {
+    width: min(260px, 78%) !important;
+    max-width: min(260px, 78%) !important;
+  }
+
+  .faculty-photo {
+    max-width: 100% !important;
+  }
+
+  .faculty-arrow {
+    top: 42% !important;
+  }
+
+  /* --- 6. Programme Overview: heading → images → content → CTA --- */
+  .programme-overview-section {
+    padding: 48px 0 40px !important;
+  }
+
+  .programme-overview-inner {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+  }
+
+  .programme-overview-content,
+  .programme-overview-media,
+  .programme-overview-side {
+    display: contents !important;
+  }
+
+  .programme-overview-heading {
+    order: 1 !important;
+    margin-bottom: 0 !important;
+    font-size: clamp(1.6rem, 6.5vw, 2rem) !important;
+    text-align: left;
+  }
+
+  .programme-overview-campus {
+    order: 2 !important;
+    margin: 0 !important;
+    width: 100%;
+  }
+
+  .programme-overview-finance {
+    order: 3 !important;
+    margin: 0 !important;
+    width: 100%;
+  }
+
+  .programme-overview-texts {
+    order: 4 !important;
+    width: 100%;
+  }
+
+  .programme-learn-more-btn {
+    order: 5 !important;
+    width: 100% !important;
+    margin-top: 4px;
+  }
+
+  .programme-overview-campus .programme-overview-img,
+  .programme-overview-finance .programme-overview-img {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .features-slider-wrap,
+  .faculty-slider-wrap {
+    padding: 0 38px !important;
+  }
+
+  .features-section .feature-card {
+    height: min(78vw, 340px) !important;
+  }
+
+  .rec-card,
+  .rec-card-small,
+  .rec-card-main {
+    height: min(78vw, 280px) !important;
+  }
+
+  .enquire-form-panel .npf_wgts [class*="col-"] {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* Keep a compact horizontal pair for short fields when space allows */
+  .enquire-form-panel .npf_wgts .row > [class*="col-"]:nth-child(-n+4) {
+    flex: 1 1 calc(50% - 6px) !important;
+    max-width: calc(50% - 6px) !important;
+    width: calc(50% - 6px) !important;
+  }
+}
+
