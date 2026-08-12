@@ -17,8 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     
-        <link rel="stylesheet" href="style.css?v=202607311500">
-        <link rel="stylesheet" href="responsive.css?v=202607311500">
+        <link rel="stylesheet" href="style.css?v=202608121650">
+        <link rel="stylesheet" href="responsive.css?v=202608121650">
 
     <!-- Critical: hero layout; enquiry form scrolls inside card only -->
     <style>
@@ -127,11 +127,21 @@
 
       .hero-section .hero-npf-scroll {
         flex: 1 1 auto !important;
-        min-height: 0 !important;
+        min-height: 280px !important;
         overflow-y: auto !important;
         overflow-x: hidden !important;
         overscroll-behavior: contain !important;
         -webkit-overflow-scrolling: touch !important;
+      }
+
+      .hero-section .hero-enquiry-card .npf_wgts,
+      .hero-section .hero-enquiry-card .npf_wgts iframe {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100% !important;
+        min-height: 360px !important;
+        height: 400px !important;
       }
 
       @media screen and (max-width: 991px) {
@@ -338,7 +348,7 @@
         .hero-enquiry-card {
           flex: 1 1 auto !important;
           max-height: 100% !important;
-          min-height: 0 !important;
+          min-height: min(22rem, 100%) !important;
           display: flex !important;
           flex-direction: column !important;
           overflow: hidden !important;
@@ -353,10 +363,21 @@
 
         .hero-npf-scroll {
           flex: 1 1 auto !important;
-          min-height: 0 !important;
+          min-height: 280px !important;
           max-height: 100% !important;
           overflow-y: auto !important;
           overflow-x: hidden !important;
+        }
+
+        .hero-section .hero-enquiry-card .npf_wgts,
+        .hero-section .hero-enquiry-card .npf_wgts iframe {
+          display: block !important;
+          visibility: visible !important;
+          opacity: 1 !important;
+          width: 100% !important;
+          min-height: clamp(260px, 42vh, 400px) !important;
+          height: clamp(260px, 42vh, 400px) !important;
+          max-height: none !important;
         }
       }
 
@@ -448,7 +469,7 @@
 
         .hero-section .hero-npf-scroll {
           flex: 1 1 auto !important;
-          min-height: 0 !important;
+          min-height: 240px !important;
           max-height: 100% !important;
           overflow-y: auto !important;
           overflow-x: hidden !important;
@@ -458,9 +479,13 @@
 
         .hero-section .hero-enquiry-card .npf_wgts,
         .hero-section .hero-enquiry-card .npf_wgts iframe {
-          height: 32rem !important;
-          max-height: 32rem !important;
-          min-height: 32rem !important;
+          display: block !important;
+          visibility: visible !important;
+          opacity: 1 !important;
+          width: 100% !important;
+          height: clamp(240px, 38vh, 32rem) !important;
+          max-height: none !important;
+          min-height: 240px !important;
         }
       }
     </style>
@@ -539,6 +564,10 @@
     </div>
   </div>
 </section>
+
+<div class="hero-scholarship-strip" role="region" aria-label="Scholarship information">
+  <p class="hero-scholarship-text">Merit-Based Scholarships Available for Eligible Candidates</p>
+</div>
 
     <section class="features-section section-global">
         <div class="container features-container">
@@ -1656,20 +1685,47 @@ document.addEventListener('DOMContentLoaded', function () {
 })();
 </script>
 
-<script type="text/javascript">var s=document.createElement("script"); s.type="text/javascript"; s.async=true; s.src="https://widgets.in8.nopaperforms.com/emwgts.js"; document.body.appendChild(s);</script>
+<!-- NPF embed form (hero + enquire sections) — load first -->
+<script type="text/javascript">
+(function () {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = 'https://widgets.in8.nopaperforms.com/emwgts.js';
+  s.onload = function () {
+    // Re-scan embeds after script load (helps when DOM was ready first)
+    try {
+      if (typeof window.npfWidgetsInit === 'function') {
+        window.npfWidgetsInit();
+      }
+    } catch (err) {}
+  };
+  document.body.appendChild(s);
+})();
+</script>
 
+<!-- NPF popup (Apply Now / brochure / learn more) -->
 <script src="https://in8cdn.npfs.co/js/widget/npfwpopup.js"></script>
 <script>
-let npfWe53f37c3bb43790c55a1da1134e9dabc = new NpfWidgetsInit({
-  widgetId: 'e53f37c3bb43790c55a1da1134e9dabc',
-  baseurl: 'widgets.in8.nopaperforms.com',
-  formTitle: 'Enquiry Form',
-  titleColor: '#FF0033',
-  backgroundColor: '#ddd',
-  iframeHeight: '500px',
-  buttonbgColor: '#4c79dc',
-  buttonTextColor: '#FFF'
-});
+(function () {
+  function initPopup() {
+    if (typeof NpfWidgetsInit === 'undefined') {
+      setTimeout(initPopup, 100);
+      return;
+    }
+    window.npfWe53f37c3bb43790c55a1da1134e9dabc = new NpfWidgetsInit({
+      widgetId: 'e53f37c3bb43790c55a1da1134e9dabc',
+      baseurl: 'widgets.in8.nopaperforms.com',
+      formTitle: 'Enquiry Form',
+      titleColor: '#FF0033',
+      backgroundColor: '#ddd',
+      iframeHeight: '500px',
+      buttonbgColor: '#4c79dc',
+      buttonTextColor: '#FFF'
+    });
+  }
+  initPopup();
+})();
 </script>
 
  

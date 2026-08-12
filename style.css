@@ -112,7 +112,7 @@ section {
     max-height: 100dvh;
     box-sizing: border-box;
     overflow: hidden;
-    --hero-form-iframe-h: 100%;
+    --hero-form-iframe-h: 360px;
     --hero-form-scroll-h: 100%;
     --hero-form-card-pad-y: 1.5rem;
     --hero-form-card-pad-x: 1.45rem;
@@ -235,7 +235,7 @@ section {
 
   .hero-enquiry-card {
     max-height: 100%;
-    min-height: 0;
+    min-height: min(22rem, 100%);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -250,7 +250,7 @@ section {
 
   .hero-npf-scroll {
     flex: 1 1 auto;
-    min-height: 0;
+    min-height: 280px;
     max-height: var(--hero-form-scroll-h);
     overflow-y: auto !important;
     overflow-x: hidden;
@@ -260,8 +260,13 @@ section {
 
   .hero-enquiry-card .npf_wgts,
   .hero-enquiry-card .npf_wgts iframe {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    min-height: var(--hero-form-iframe-h) !important;
     height: var(--hero-form-iframe-h) !important;
-    max-height: var(--hero-form-iframe-h) !important;
+    max-height: none !important;
   }
 
   .hero-info-bar {
@@ -284,6 +289,7 @@ section {
     --hero-form-card-pad-x: 1.1rem;
     --hero-form-title-size: 1.1rem;
     --hero-form-bar-gap: 1.75rem;
+    --hero-form-iframe-h: 300px;
   }
 
   .hero-header {
@@ -334,6 +340,7 @@ section {
     --hero-form-card-pad-x: 0.9rem;
     --hero-form-title-size: 0.95rem;
     --hero-form-bar-gap: 1.25rem;
+    --hero-form-iframe-h: 240px;
   }
 
   .hero-header {
@@ -815,10 +822,12 @@ section {
 
 .hero-enquiry-card .npf_wgts,
 .hero-enquiry-card .npf_wgts iframe {
-  display: block;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
   width: 100% !important;
   max-width: 100%;
-  min-height: 0;
+  min-height: 360px !important;
   height: 400px !important;
   border: none;
   background: transparent;
@@ -827,8 +836,9 @@ section {
 @media screen and (min-width: 992px) {
   .hero-enquiry-card .npf_wgts,
   .hero-enquiry-card .npf_wgts iframe {
-    height: var(--hero-form-iframe-h, 100%) !important;
-    max-height: var(--hero-form-iframe-h, 100%) !important;
+    min-height: var(--hero-form-iframe-h, 360px) !important;
+    height: var(--hero-form-iframe-h, 360px) !important;
+    max-height: none !important;
   }
 }
 
@@ -969,6 +979,48 @@ section {
   font-weight: 800;
   font-size: inherit;
   white-space: normal;
+}
+
+/* Scholarship strip — below hero info bar */
+.hero-scholarship-strip {
+  background: linear-gradient(90deg, #1a237e 0%, #4527a0 32%, #7b1fa2 62%, #00acc1 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.28);
+  width: 100%;
+  max-width: 100%;
+  padding: 0.9rem clamp(12px, 3vw, 24px);
+  text-align: center;
+  position: relative;
+  z-index: 6;
+}
+
+.hero-scholarship-text {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(0.9rem, 1.35vw, 1.1rem);
+  font-weight: 800;
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 992px) {
+  .hero-scholarship-strip {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero-scholarship-strip {
+    padding: 0.75rem 12px;
+  }
+
+  .hero-scholarship-text {
+    font-size: clamp(0.82rem, 3.2vw, 0.95rem);
+    line-height: 1.4;
+  }
 }
 
 /* Wider desktop: widen gutters only. Hero layout is content-driven (no 100svh,
