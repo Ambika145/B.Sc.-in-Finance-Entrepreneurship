@@ -1685,24 +1685,7 @@ document.addEventListener('DOMContentLoaded', function () {
 })();
 </script>
 
-<!-- NPF embed form (hero + enquire sections) — load first -->
-<script type="text/javascript">
-(function () {
-  var s = document.createElement('script');
-  s.type = 'text/javascript';
-  s.async = true;
-  s.src = 'https://widgets.in8.nopaperforms.com/emwgts.js';
-  s.onload = function () {
-    // Re-scan embeds after script load (helps when DOM was ready first)
-    try {
-      if (typeof window.npfWidgetsInit === 'function') {
-        window.npfWidgetsInit();
-      }
-    } catch (err) {}
-  };
-  document.body.appendChild(s);
-})();
-</script>
+<script type="text/javascript"> var s=document.createElement("script"); s.type="text/javascript"; s.async=true; s.src="https://widgets.in8.nopaperforms.com/emwgts.js"; document.body.appendChild(s); </script>
 
 <!-- NPF popup (Apply Now / brochure / learn more) -->
 <script src="https://in8cdn.npfs.co/js/widget/npfwpopup.js"></script>
